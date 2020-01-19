@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'blog',
     'config',
     'comment',
+    'django_blog',
 ]
 
 MIDDLEWARE = [
