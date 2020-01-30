@@ -31,5 +31,5 @@ urlpatterns = [
     url(r'search/$', SearchView.as_view(), name='search'),
     url(r'author/(?P<owner_id>\d+)/$', AuthorView.as_view(), name='author'),
     url(r'links/$', LinkListView.as_view(), name='links'),
-    url(r'comment/$', CommentView.as_view(), name='comment')
+    url(r'^comment/$', CommentView.as_view(), name='comment')
 ]

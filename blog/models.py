@@ -139,6 +139,12 @@ class Post(models.Model):
     def hot_posts(cls):
         return cls.objects.filter(status=cls.STATUS_NORMAL).order_by('-pv')
 
+<<<<<<< HEAD
     def save(self, *args, **kwargs):
         self.content_html = mistune.markdown(self.content)
         super().save(*args, **kwargs)
+=======
+    def save(self, *args,**kwargs):
+        self.content_html = mistune.markdown(self.content_html)
+        super().save(*args,**kwargs)
+>>>>>>> 95ae263cf1789a3817f8278f827e744d87f25f0a
