@@ -4,19 +4,11 @@
 {% block title %} {{ post.title }} {% endblock %}
 
 {% block extra_head %}
-<link rel="stylesheet" href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css">
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-{% endblock %}
-<<<<<<< HEAD
-{% block extra_head %}
     <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/googlecode.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js">
     </script>
     <script>h1js.initHightingOnLoad();</script>
 {% endblock %}
-=======
->>>>>>> 95ae263cf1789a3817f8278f827e744d87f25f0a
 
 {% block main %}
     {% if post %}
@@ -28,7 +20,6 @@
         <span>pv/uv:{{ post.pv }}/{{ post.uv }}</span>
     </div>
     <hr/>
-<<<<<<< HEAD
     <div class="comment">
         <form class="form-group" action="/comment/" method="POST">
             {% csrf_token %}
@@ -52,14 +43,13 @@
                 </li>
             {% endfor %}
         </ul>
-=======
+
     <p>
         {% autoescape off %}
         {{ post.content_html }}
         {% endautoescape %}
     </p>
     {% endif %}
->>>>>>> 95ae263cf1789a3817f8278f827e744d87f25f0a
 
     {% comment_block request.path %}
 {% endblock %}

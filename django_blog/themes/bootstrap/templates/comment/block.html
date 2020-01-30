@@ -1,12 +1,6 @@
 <hr/>
 <div class="comment">
-<<<<<<< HEAD
-    <form class="form-group" action="/commment/" method="POST">
-        {% csrf_token %}
-        <input name="target" type="hidden" value="{{ target }}"/>
-        {{ comment_form }}
-        <input type="submit" value="写好了!"/>
-=======
+
     <form id="comment_form" class="form-group" action="/comment/" method="POST">
         {% csrf_token %}
         <input name="target" type="hidden" value="{{target}}"/>
@@ -14,21 +8,11 @@
         <div id="captcha_section"></div>
         <input id="verify" type="button" value="写好了！"/>
         <input id="submit" type="submit" style="display:None" value="写好了！"/>
->>>>>>> 95ae263cf1789a3817f8278f827e744d87f25f0a
     </form>
 
     <!-- 评论列表-->
     <ul class="list-group">
         {% for comment in comment_list %}
-<<<<<<< HEAD
-            <li class="list-group-item">
-                <div class="nickname">
-                    <a href="{{ comment.website }}">{{ comment.nickname }}</a>
-                    <span>{{ comment.created_time }}</span>
-                </div>
-                <div class="comment-content">{% autoescape off %}{{ comment.content }}{% endautoescape %}</div>
-            </li>
-=======
         <li class="list-group-item">
             <div class="nickname">
                 <a href="{{ comment.website }}">{{ comment.nickname }}</a> <span>{{ comment.created_time }}</span>
@@ -39,7 +23,6 @@
                 {% endautoescape %}
             </div>
         </li>
->>>>>>> 95ae263cf1789a3817f8278f827e744d87f25f0a
         {% endfor %}
     </ul>
 </div>
